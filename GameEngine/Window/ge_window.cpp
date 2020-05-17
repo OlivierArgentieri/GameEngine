@@ -81,6 +81,13 @@ void ge_window::UpdateInputEvent() const
 	glfwPollEvents();
 }
 
+void ge_window::UpdateBackgroundColor(ge_color _bgColor)
+{
+	backgroundColor = ge_color(_bgColor);
+	glClearColor(backgroundColor.r, backgroundColor.g, backgroundColor.b, backgroundColor.a);
+	
+}
+
 int ge_window::GetKey(int _key) const
 {
 	return glfwGetKey(window, _key);

@@ -27,7 +27,8 @@ public:
 	void InitWindow() const;
 	void SwapBuffer() const;
 	void UpdateInputEvent() const;
-	
+	void UpdateBackgroundColor(ge_color _bgColor);
+
 	int GetKey(int _key) const;
 	
 	GLFWwindow* GetWindow() const;
