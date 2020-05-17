@@ -30,5 +30,8 @@
 *.exe
 *.out
 *.app
+
+Bin/**
+out/**
 Build/**
 .vs/**
