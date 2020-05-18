@@ -1,4 +1,4 @@
 # GameEngine
 GLFW GLEW GLM ImGui (CMakeFile)
 
-![hosted-basic-autocache](https://github.com/OlivierArgentieri/GameEngine/workflows/hosted-basic-autocache/badge.svg)
+![GLFW-GLEW-GLM-ImGui](https://github.com/OlivierArgentieri/GameEngine/workflows/GLFW-GLEW-GLM-ImGui/badge.svg)
