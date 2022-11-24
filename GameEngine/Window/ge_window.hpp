@@ -23,11 +23,11 @@ private:
 
 
 public:
-	ge_window(float _width, float _height, const char* _title, const ge_color _bgColor);
+	ge_window(float _width, float _height, const char* _title, const ge_color& _bgColor);
 	void InitWindow() const;
 	void SwapBuffer() const;
 	void UpdateInputEvent() const;
-	void UpdateBackgroundColor(ge_color _bgColor);
+	void UpdateBackgroundColor(const ge_color& _bgColor);
 
 	int GetKey(int _key) const;
 	

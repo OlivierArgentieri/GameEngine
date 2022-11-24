@@ -35,12 +35,12 @@ void ge_window::CreateWindow(const char* _titleWindow)
 	}
 }
 
-ge_window::ge_window(float _width, float _height, const char* _title, const ge_color _bgColor)
+ge_window::ge_window(float _width, float _height, const char* _title, const ge_color& _bgColor)
 {
 	width = _width;
 	height = _height;
 	CreateWindow(_title);
-	backgroundColor = ge_color(_bgColor);
+	backgroundColor = _bgColor;
 }
 
 void ge_window::InitWindow() const
@@ -81,11 +81,10 @@ void ge_window::UpdateInputEvent() const
 	glfwPollEvents();
 }
 
-void ge_window::UpdateBackgroundColor(ge_color _bgColor)
+void ge_window::UpdateBackgroundColor(const ge_color& _bgColor)
 {
-	backgroundColor = ge_color(_bgColor);
+	backgroundColor = _bgColor;
 	glClearColor(backgroundColor.r, backgroundColor.g, backgroundColor.b, backgroundColor.a);
-	
 }
 
 int ge_window::GetKey(int _key) const

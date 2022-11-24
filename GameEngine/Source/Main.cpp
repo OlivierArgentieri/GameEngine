@@ -36,12 +36,19 @@ int main(void)
 	bool show_demo_window = true;
 	bool show_another_window = false;
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-	
+	static ge_color bg_color = ge_color(clear_color.x, clear_color.y, clear_color.z, clear_color.w);
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(geWindow.GetWindow()))
 	{
-		windowColor = ge_color(clear_color.x, clear_color.y, clear_color.z, clear_color.w);
-		geWindow.UpdateBackgroundColor(windowColor);
+		windowColor = bg_color;
+		geWindow.UpdateBackgroundColor(
+		{
+			clear_color.x,
+			clear_color.y,
+			clear_color.z,
+			clear_color.w
+		});
+
 		/* Render here */
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -56,7 +63,7 @@ int main(void)
 		glVertex2f(0.5f, -0.5f);
 		glEnd();
 
-
+		
 		// one window
 		{
 			static float f = 0.0f;
