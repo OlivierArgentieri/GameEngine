@@ -83,7 +83,10 @@ void ge_window::UpdateInputEvent() const
 
 void ge_window::UpdateBackgroundColor(const ge_color& _bgColor)
 {
-	backgroundColor = _bgColor;
+	backgroundColor.r = _bgColor.r;
+	backgroundColor.g = _bgColor.g;
+	backgroundColor.b = _bgColor.b;
+	backgroundColor.a = _bgColor.a;
 	glClearColor(backgroundColor.r, backgroundColor.g, backgroundColor.b, backgroundColor.a);
 }
 

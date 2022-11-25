@@ -1,6 +1,5 @@
 #include <vector>
 #include <glm.hpp>
-#include <GL/gl.h>
 
 class ge_window;
 
@@ -10,9 +9,9 @@ private:
 	std::vector<glm::vec3> vertices;
 	std::vector<glm::vec2> uvs;
 
-	GLuint vertexArrayID;
-	GLuint programID;
-	GLuint matrixID;
+	int vertexArrayID;
+	int programID;
+	int matrixID;
 
 	static void InitGlew();
 	static void ClearScreen();
